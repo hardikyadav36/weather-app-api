@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+    <div class="main-content">
+        <div class="headi">
+            <h1>Weather App</h1>
+        </div>
+        <div>
+
+        </div>
+        <article class="widget">
+            <div class="inform">
+                <form action="/" method="post">
+                    <label for="cityinput">City Name: </label>
+                    <input id="cityinput" type="text" name="cityName">
+                    <button type="submit">Go</button>
+                </form>
+            </div>
+            <div class="weatherIcon"><i class="wi wi-day-cloudy"></i></div>
+            <div class="weatherInfo">
+                <div class="temperature"><span>25&deg;</span></div>
+                <div class="description">
+                    <div class="weatherCondition">CLOUDY</div>
+                    <div class="place">New York, New York</div>
+                </div>
+            </div>
+            <div class="date"><p><span id="datetime"></span></p><script>var currentDate  = new Date(),
+                currentDay   = currentDate.getDate() < 10 
+                             ? '0' + currentDate.getDate() 
+                             : currentDate.getDate(),
+                currentMonth = currentDate.getMonth() < 9 
+                             ? '0' + (currentDate.getMonth() + 1) 
+                             : (currentDate.getMonth() + 1);
+            
+            document.getElementById("datetime").innerHTML = currentDay + '/' + currentMonth + '/' +  currentDate.getFullYear();</script> </div>
+        </article>
+    </div>
+</body>
+
+</html>
